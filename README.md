@@ -50,7 +50,7 @@ terraform apply
 # Screenshots
 
 End of Terraform's output. The cluster is created successfully.<br>
-Wee can see the outputs defined in the outputs.tf like the endpoint, name or the cluster region.
+We can see the outputs defined in the outputs.tf like the endpoint, name or the cluster region.
 ![ScreenShot](img/eks_terraform_done.png)
 
 Go to the ESK AWS console to check the presence of the cluster.
