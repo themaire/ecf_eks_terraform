@@ -4,7 +4,6 @@
 ## Inspired from various readed exemples :
 # VPS module : https://registry.terraform.io/modules/terraform-aws-modules/vpc/aws/latest
 # EKS module : https://registry.terraform.io/modules/terraform-aws-modules/eks/aws/latest
-# Fargate exemple (very helpfull!!) : https://github.com/terraform-aws-modules/terraform-aws-eks/blob/master/examples/fargate_profile/main.tf
 # ESK How to : https://developer.hashicorp.com/terraform/tutorials/kubernetes/eks
 ## :-)
 
