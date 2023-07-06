@@ -47,6 +47,36 @@ terraform plan # For prevew what will do
 terraform apply
 ```
 
+## > > > BONUS --- "kubectl" command line tool:
+<p>The kubectl cli command interface is a good way to interract with your Kubernetes cluster.<br><br>
+How to install : https://kubernetes.io/fr/docs/tasks/tools/install-kubectl/<br>
+
+Easy auto add kubectl config. Need to cd into terraform cluster folder :</p>
+```
+aws eks --region $(terraform output -raw region) update-kubeconfig --name $(terraform output -raw cluster_name)
+```
+
+Now, you can for exemple (in a nodeJS namespace):<br>
+
+Describe the namespace content :<br>
+```
+kubectl get all -n nodeJS
+```
+
+Describe a service :<br>
+```
+kubectl -n nodeJS describe service eks-flask-linux-service
+```
+
+List pods : <br>
+```
+kubectl get -n flnodeJSask pod
+```
+
+Describe a pod :<br>
+```
+kubectl -n flask describe pod/nodeJS-85cd7995cb-k7bwf
+```
 # Screenshots
 
 End of Terraform's output. The cluster is created successfully.<br>
