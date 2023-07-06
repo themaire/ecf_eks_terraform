@@ -65,17 +65,17 @@ kubectl get all -n nodeJS
 
 Describe a service :<br>
 ```
-kubectl -n nodeJS describe service eks-flask-linux-service
+kubectl -n nodeJS describe service eks-bancash-linux-service
 ```
 
 List pods : <br>
 ```
-kubectl get -n flnodeJSask pod
+kubectl get -n nodeJS pod
 ```
 
 Describe a pod :<br>
 ```
-kubectl -n flask describe pod/nodeJS-85cd7995cb-k7bwf
+kubectl -n nodeJS describe pod/nodeJS-85cd7995cb-k7bwf
 ```
 # Screenshots
 
