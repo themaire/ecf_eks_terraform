@@ -7,6 +7,15 @@
 # ESK How to : https://developer.hashicorp.com/terraform/tutorials/kubernetes/eks
 ## :-)
 
+terraform {
+  required_providers {
+    aws = {
+      source = "hashicorp/aws"
+      version = "5.6.2"
+    }
+  }
+}
+
 provider "aws" {
   region = var.region
 }
@@ -24,7 +33,7 @@ locals {
 ###
 module "vpc" {
   source  = "terraform-aws-modules/vpc/aws"
-  version = "5.0.0"
+  # version = "5.0.0"
 
   name = "ecf-vpc"
 
@@ -56,7 +65,7 @@ module "vpc" {
 ###
 module "eks" {
   source  = "terraform-aws-modules/eks/aws"
-  version = "~> 19.0"
+  # version = "~> 19.0"
 
   cluster_name    = local.cluster_name
   cluster_version = "1.27"
@@ -76,8 +85,8 @@ module "eks" {
       instance_types = ["t4g.small"]
 
       min_size     = 1
-      max_size     = 3
-      desired_size = 2
+      max_size     = 2
+      desired_size = 1
     }
 
     two = {
